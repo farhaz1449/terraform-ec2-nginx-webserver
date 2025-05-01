@@ -82,13 +82,13 @@ resource "aws_instance" "web_server" {
 
   user_data = <<-EOF
               #!/bin/bash
-              apt-get update
-              apt-get install -y nginx
-              systemctl start nginx
-              systemctl enable nginx
+              sudo apt-get update
+              sudo apt-get install -y nginx
+              sudo systemctl start nginx
+              sudo systemctl enable nginx
               sudo rm -rf /var/www/html/*
               git clone https://gitlab.com/farhaz1449/deploy-webserver.git
-              sudo cp -rf deploy-webserver/IndexFile/index.html /var/www/html/
+              sudo cp -rf deploy-webserver/IndexFile/index.html /var/www/html/index.html
               sudo rm -rf deploy-webserver/
               EOF
 
