@@ -1,11 +1,11 @@
 terraform {
-  cloud {
-    organization = "TS4U"
+  # cloud {
+  #   organization = "TS4U"
 
-    workspaces {
-      name = "terraform-ec2-nginx-webserver"
-    }
-  }
+  #   workspaces {
+  #     name = "terraform-ec2-nginx-webserver"
+  #   }
+  # }
 
   required_providers {
     aws = {
